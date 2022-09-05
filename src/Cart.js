@@ -4,10 +4,10 @@ import CartItem from './CartItem';
 const Cart=(props)=> {
  
 
-    const { products } =props;
+    const { Products } =props;
     return (
       <div className="cart">
-        {products.map((product) => {
+        {Products.map((product) => {
           return (
             <CartItem
               product={product}
