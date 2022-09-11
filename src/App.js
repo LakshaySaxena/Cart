@@ -195,25 +195,25 @@ class App extends React.Component {
   };
   
 
-  render(){
-    const {Products,loading }=this.state;
-  return (
-    <div className="App">
-  <Navbar count= {this.getCartCount()}/>
-  {/* <button onClick={this.addProduct} style={{ padding: 20, fontSize: 20 }}>
-          Add a Product
-        </button> */}
-  <Cart
-          Products={Products}
-         onIncreaseQuantity={this.handleIncreaseQuantity}
-         onDecreaseQuantity={this.handleDecreaseQuantity}
-         onDeleteProduct={this.handleDeleteProduct}
-  />
-  {loading && <h1>Loading your Cart!!!</h1>}
-  <div style={ {background: '#4267b2', padding: 10, fontSize: 20} }>TOTAL: {this.getCartTotal()} </div>
-    </div>
-  );
+    render(){
+      const {Products,loading }=this.state;
+    return (
+      <div className="App">
+    <Navbar count= {this.getCartCount()}/>
+    {/* <button onClick={this.addProduct} style={{ padding: 20, fontSize: 20 }}>
+            Add a Product
+          </button> */}
+    <Cart
+            Products={Products}
+          onIncreaseQuantity={this.handleIncreaseQuantity}
+          onDecreaseQuantity={this.handleDecreaseQuantity}
+          onDeleteProduct={this.handleDeleteProduct}
+    />
+        {loading && <h1>Loading your Cart!!!</h1>}
+      <div style={ {background: '#4267b2', padding: 10, fontSize: 20} }>TOTAL: {this.getCartTotal()} </div>
+        </div>
+    );
+    }
   }
-}
 
 export default App;
